@@ -64,6 +64,8 @@
   --fs-card-sub:      0.95rem;   /* card h4 */
   --fs-footer-title:  1.5rem;
 
+  --button:      #cbc0c3;  /* gray-mauve – .button (lebenslauf) */
+
   --gap: 1.25rem;
   --radius: 4px;
   --max-width: 1200px;
@@ -134,7 +136,7 @@ a { color: inherit; }
   position: absolute;
   top: 80%;
   right: 0;
-  width: 70px;
+  width: clamp(70px, 4vw, 110px);   /* 70px on laptops, grows a bit on big monitors */
   pointer-events: none;
   opacity: 0;
   transform: translateX(110%);
@@ -196,8 +198,8 @@ a { color: inherit; }
 .section {
   --accent: var(--accent-blue);
   max-width: var(--max-width);
-  /*margin: 4rem auto;*/
-  /*padding: var(--gap);*/
+  margin: 1rem auto;
+  padding: var(--gap);
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -223,13 +225,15 @@ a { color: inherit; }
 /* Small label above a title */
 .section-eyebrow {
   margin: 0 0 calc(var(--gap) * -1);
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 1rem 0;
   font-size: var(--fs-eyebrow);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent);
   background: var(--title-bar);
 }
+/* title directly under an eyebrow: no extra space between the two */
+.section-eyebrow + .section-title { padding-top: 0; }
 
 /* ---------- Cards (yellow) ---------- */
 .card-grid {
@@ -262,7 +266,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
-  padding: var(--gap);
+  /*padding: var(--gap);*/
   background: var(--feature);
   align-items: start;
 }
@@ -297,6 +301,63 @@ a { color: inherit; }
   border-radius: 12px;
 }
 
+/* ---------- About page (about.html) ---------- */
+.section--about {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* photo (left) + text card (right), same height */
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+.about-photo {
+  display: grid;
+  place-items: center;
+  padding: 3rem 2rem;
+}
+.about-photo img {
+  max-width: 360px;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+}
+
+/* CV button, pushed to the bottom right of the card; the figure stands on it */
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+.cv-figure {
+  width: 60px;
+  margin-right: 1rem;
+  margin-bottom: -2px;   /* feet touch the button */
+  pointer-events: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.25rem 3.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  background: var(--button);
+  transition: filter 0.2s ease;
+}
+.button:hover,
+.button:focus-visible { filter: brightness(0.92); }
+
 /* ---------- Footer ---------- */
 .site-footer {
   padding: 2rem 1.5rem 4rem;
@@ -319,17 +380,33 @@ a { color: inherit; }
 .site-footer li { margin-bottom: 0.5rem; }
 
 /* ---------- Scroll progress bar ---------- */
+/* floating pill above the bottom edge; only visible while scrolling (see js/main.js) */
 .progress {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6px;
-  background: var(--bar);
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 100;
+  width: min(var(--max-width), 100%);   /* same outer width as a .section */
+  height: 20px;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 35%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.progress.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 .progress-fill {
   height: 100%;
   width: 0;
+  border-radius: 999px;
   background: var(--section);
 }
 
@@ -346,6 +423,9 @@ a { color: inherit; }
   .logo { letter-spacing: 0.02em; }
 
   .section { margin: 2rem 0.75rem; }
+  .progress { width: calc(100% - 1.5rem); }   /* matches the section's 0.75rem side margins */
   .feature-row { grid-template-columns: 1fr; }
   .feature-row--reverse .media { order: 0; }
+  .about-row { grid-template-columns: 1fr; }
+  .about-card { padding: 1.5rem; }
 }
