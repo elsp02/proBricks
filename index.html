@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>proBRICKS – Making Learning Tangible</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="#" class="logo" aria-label="proBRICKS home">
+      <span class="logo-pro">pro</span><span class="l1">B</span><span class="l2">R</span><span class="l3">I</span><span class="l4">C</span><span class="l5">K</span><span class="l6">S</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#about">about me</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <div class="video video--hero">
+      <video controls preload="metadata" poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="band">
+      <div class="tagline">
+        <p class="tagline-title">Making learning tangible</p>
+        <p class="tagline-sub">Bachelor thesis project</p>
+      </div>
+    </div>
+
+    <!-- Background -->
+    <section class="section section--background" id="background">
+      <h2 class="section-title">Background</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>The Challenge</h3>
+          <p>In special education classrooms, building activities with construction bricks are often used to playfully develop spatial thinking, problem-solving and planning skills.</p>
+          <p>However, traditional bricks cannot provide feedback. Mistakes may go unnoticed until much later, making corrections frustrating and often requiring help from a teacher.</p>
+        </article>
+        <article class="card">
+          <h3>Designed for Different Needs</h3>
+          <p>proBricks was developed specifically for children with special educational needs (particularly in the areas of learning, cognitive development and autism).</p>
+          <p>Since learners have very different abilities and support needs, the goal was to create an accessible, adaptable learning experience that encourages independent exploration.</p>
+        </article>
+        <article class="card">
+          <h3>The Concept</h3>
+          <p>proBricks combines physical building with digital learning. The smart bricks automatically detect how they are connected and oriented, creating a real-time digital representation of the construction.</p>
+          <p>By comparing the physical structure with a digital building challenge, the system provides immediate feedback, helping children identify mistakes and find solutions more independently.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interaction -->
+    <section class="section section--interaction" id="interaction">
+      <h2 class="section-title">Interaction</h2>
+      <div class="video">
+        <video controls preload="metadata" poster="assets/interaction-poster.jpg">
+          <source src="assets/interaction.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>How to Play</h3>
+          <p>Learners select a 3D target structure in the learning application and recreate it using physical bricks.</p>
+          <p>As the bricks are connected, the system automatically detects their arrangement and creates a digital twin of the construction. By continuously comparing it with the target, learners receive feedback throughout the building process.</p>
+        </article>
+        <article class="card">
+          <h3>Feedback That Guides</h3>
+          <p>Feedback is provided both digitally and directly on the physical bricks.</p>
+          <p>Integrated LEDs indicate correct or incorrect placements, while the learning application visualizes the construction, highlights mistakes and tracks progress. Transparent ghost bricks can even suggest where to build next.</p>
+        </article>
+        <article class="card">
+          <h3>One System, Different Needs</h3>
+          <p>From simple structures to complex 3D challenges, task difficulty can be adapted to different abilities and learning needs.</p>
+          <p>The digital learning application also opens up possibilities for different levels of guidance, multimodal feedback and new game modes — all using the same physical bricks.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="section section--technology" id="technology">
+      <h2 class="section-title">Technology</h2>
+
+      <div class="feature-row">
+        <article class="card">
+          <h3>Anatomy of a Brick</h3>
+          <p>Each smart brick contains a custom-designed PCB with a microcontroller and integrated feedback LEDs, enclosed in a modular, 3D-printed housing.</p>
+          <p>The bricks combine magnetic attraction with mechanical guidance, making connections easy to establish while ensuring precise alignment. The modular housing also allows individual components to be assembled, replaced and modified.</p>
+        </article>
+        <figure class="media">
+          <img src="assets/brick-anatomy.png" alt="Exploded view of a smart brick: lid, frame, pogo pins, interchangeable sides and receiving face">
+        </figure>
+      </div>
+
+      <div class="feature-row feature-row--reverse">
+        <article class="card">
+          <h3>One Interface, Multiple Functions</h3>
+          <h4>Connection</h4>
+          <p>A single brick-to-brick interface combines five essential functions:</p>
+          <h4>Mechanical Connection</h4>
+          <p>Magnets and interlocking geometry guide the bricks into position and provide a stable, easy-to-use connection.</p>
+          <h4>Rotation Detection</h4>
+          <p>Four contacts on the docking face interact with a single contact on the receiving face, identifying the brick's relative rotation in 90° increments.</p>
+          <h4>Connection Detection</h4>
+          <p>Each brick identifies which of its receiving faces are connected to neighboring bricks.</p>
+          <h4>Data Communication</h4>
+          <p>The same electrical contacts used for orientation detection enable bidirectional data communication between connected bricks.</p>
+          <h4>Power Supply</h4>
+          <p>Concentrically arranged power contacts distribute electricity from the baseplate throughout the entire construction, eliminating the need for individual batteries.</p>
+        </article>
+        <figure class="media">
+          <img src="assets/brick-interface.png" alt="Docking and receiving faces of a brick with their contact layouts">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Usertests -->
+    <section class="section section--usertests" id="usertests">
+      <p class="section-eyebrow">Usertests</p>
+      <h2 class="section-title">Building with the Students</h2>
+      <div class="media-strip">
+        <figure class="media"><img src="assets/usertest-1.jpg" alt="Stacked proBricks built during a user test"></figure>
+        <figure class="media"><img src="assets/usertest-2.jpg" alt="Stacked proBricks built during a user test"></figure>
+        <figure class="media"><img src="assets/usertest-3.jpg" alt="Stacked proBricks built during a user test"></figure>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Insights</h3>
+          <p>The first prototype was tested at a special education school. Seeing how excited the children were to try proBricks was one of the highlights of the project. The children enthusiastically explored different building challenges and experimented independently.</p>
+        </article>
+        <article class="card">
+          <h3>What's Next?</h3>
+          <p>The flexible learning platform opens up possibilities for new game modes, multimodal feedback and collaborative challenges. Connecting physical constructions with digital worlds could create entirely new experiences.</p>
+          <p>Beyond special education, proBricks could also find applications in mainstream schools, therapy and rehabilitation, or learning activities for older adults.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="about">
+    <h2>Further Information</h2>
+    <ul>
+      <li><a href="#">GitHub repository</a></li>
+      <li>REM Conference on 12 November</li>
+    </ul>
+  </footer>
+
+  <div class="progress" aria-hidden="true"><div class="progress-fill"></div></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
