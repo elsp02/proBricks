@@ -23,7 +23,7 @@
     <!-- Hero -->
     <div class="video video--hero">
       <video autoplay muted playsinline poster="assets/hero-poster.jpg">
-        <source src="assets/brick-animated.mp4" type="video/mp4">
+        <source src="assets/title.mp4" type="video/mp4">
       </video>
       <button class="video-play" type="button" aria-label="Play video">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -53,7 +53,7 @@
         </article>
         <article class="card">
           <h3>The Concept</h3>
-          <p>proBricks combines physical building with digital learning. The smart bricks automatically detect how they are connected and oriented, creating a real-time digital representation of the construction.</p>
+          <p>proBricks combines physical building with digital learning. The smart bricks automatically detect how they are connected and oriented, creating a real-time digital representation of the construction, in a sense giving the bricks <span class="name-origin"><span class="logo-pro">pro</span><span class="l1">p</span><span class="l2">r</span><span class="l3">i</span><span class="l4">o</span><span class="l5">c</span><span class="l6">e</span><span class="l1">p</span><span class="l2">t</span><span class="l3">i</span><span class="l4">o</span><span class="l5">n</span></span>.</p>
           <p>By comparing the physical structure with a digital building challenge, the system provides immediate feedback, helping children identify mistakes and find solutions more independently.</p>
         </article>
       </div>
@@ -62,9 +62,9 @@
     <!-- Interaction -->
     <section class="section section--interaction" id="interaction">
       <h2 class="section-title">Interaction</h2>
-      <div class="video">
+      <div class="video video--square">
         <video playsinline preload="metadata" poster="assets/interaction-poster.jpg">
-          <source src="assets/video_probricks.mp4" type="video/mp4">
+          <source src="assets/video_probricks2.mp4" type="video/mp4">
         </video>
         <button class="video-play video-toggle" type="button" aria-label="Play video">
           <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -83,7 +83,7 @@
           <p>Integrated LEDs indicate correct or incorrect placements, while the learning application visualizes the construction, highlights mistakes and tracks progress. Transparent ghost bricks can even suggest where to build next.</p>
         </article>
         <article class="card">
-          <h3>One System, Different Needs</h3>
+          <h3>Possibilities</h3>
           <p>From simple structures to complex 3D challenges, task difficulty can be adapted to different abilities and learning needs.</p>
           <p>The digital learning application also opens up possibilities for different levels of guidance, multimodal feedback and new game modes, all using the same physical bricks.</p>
         </article>
@@ -150,12 +150,21 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" id="about">
-    <h2>Further Information</h2>
-    <ul>
-      <li><a href="#">GitHub repository</a></li>
-      <li>REM Conference on 12 November</li>
-    </ul>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="#" class="logo" aria-label="proBRICKS – back to top">
+        <span class="logo-pro">pro</span><span class="l1">B</span><span class="l2">R</span><span class="l3">I</span><span class="l4">C</span><span class="l5">K</span><span class="l6">S</span>
+      </a>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/elsp02/proBricks-platformIO" target="_blank" rel="noopener">
+            <svg class="icon-github" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            <span class="visually-hidden">GitHub</span> repository
+          </a>
+        </li>
+        <li>Presented at REM 2026</li>
+      </ul>
+    </div>
   </footer>
 
   <div class="progress" aria-hidden="true"><div class="progress-fill"></div></div>
