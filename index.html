@@ -15,22 +15,25 @@
     </a>
     <nav class="site-nav">
       <a href="about.html">about me</a>
-      <img class="peek" src="assets/lego_elena.png" alt="" aria-hidden="true">
+      <img class="peek" src="assets/elena_lego_side@3x.png" alt="" aria-hidden="true">
     </nav>
   </header>
 
   <main>
     <!-- Hero -->
     <div class="video video--hero">
-      <video autoplay muted playsinline controls poster="assets/hero-poster.jpg">
-        <source src="assets/hero.mp4" type="video/mp4">
+      <video autoplay muted playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/brick-animated.mp4" type="video/mp4">
       </video>
+      <button class="video-play" type="button" aria-label="Play video">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      </button>
     </div>
 
     <div class="band">
       <div class="tagline">
-        <p class="tagline-title">Making learning tangible</p>
-        <p class="tagline-sub">Bachelor thesis project</p>
+        <p class="tagline-title">Interactive Building System</p>
+        <p class="tagline-sub">Making learning tangible </p>
       </div>
     </div>
 
@@ -60,9 +63,13 @@
     <section class="section section--interaction" id="interaction">
       <h2 class="section-title">Interaction</h2>
       <div class="video">
-        <video controls preload="metadata" poster="assets/interaction-poster.jpg">
+        <video playsinline preload="metadata" poster="assets/interaction-poster.jpg">
           <source src="assets/video_probricks.mp4" type="video/mp4">
         </video>
+        <button class="video-play video-toggle" type="button" aria-label="Play video">
+          <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
       </div>
       <div class="card-grid">
         <article class="card">
@@ -78,7 +85,7 @@
         <article class="card">
           <h3>One System, Different Needs</h3>
           <p>From simple structures to complex 3D challenges, task difficulty can be adapted to different abilities and learning needs.</p>
-          <p>The digital learning application also opens up possibilities for different levels of guidance, multimodal feedback and new game modes — all using the same physical bricks.</p>
+          <p>The digital learning application also opens up possibilities for different levels of guidance, multimodal feedback and new game modes, all using the same physical bricks.</p>
         </article>
       </div>
     </section>
@@ -94,14 +101,13 @@
           <p>The bricks combine magnetic attraction with mechanical guidance, making connections easy to establish while ensuring precise alignment. The modular housing also allows individual components to be assembled, replaced and modified.</p>
         </article>
         <figure class="media">
-          <img src="assets/brick-anatomy.png" alt="Exploded view of a smart brick: lid, frame, pogo pins, interchangeable sides and receiving face">
+          <img class="anatomy-img" src="assets/cube_exploded.png" alt="Exploded view of a smart brick: lid, frame, pogo pins, interchangeable sides and receiving face">
         </figure>
       </div>
 
       <div class="feature-row feature-row--reverse">
         <article class="card">
           <h3>One Interface, Multiple Functions</h3>
-          <h4>Connection</h4>
           <p>A single brick-to-brick interface combines five essential functions:</p>
           <h4>Mechanical Connection</h4>
           <p>Magnets and interlocking geometry guide the bricks into position and provide a stable, easy-to-use connection.</p>
@@ -115,7 +121,7 @@
           <p>Concentrically arranged power contacts distribute electricity from the baseplate throughout the entire construction, eliminating the need for individual batteries.</p>
         </article>
         <figure class="media">
-          <img src="assets/brick-interface.png" alt="Docking and receiving faces of a brick with their contact layouts">
+          <img class="interface-img" src="assets/brick-interface.png" alt="Docking and receiving faces of a brick with their contact layouts">
         </figure>
       </div>
     </section>
@@ -125,9 +131,9 @@
       <p class="section-eyebrow">Usertests</p>
       <h2 class="section-title">Building with the Students</h2>
       <div class="media-strip">
-        <figure class="media"><img src="assets/learners.jpg" alt="Stacked proBricks built during a user test"></figure>
+        <figure class="media"><img src="assets/learner4.jpeg" alt="Stacked proBricks built during a user test"></figure>
+        <figure class="media"><img src="assets/learner3.jpeg" alt="Stacked proBricks built during a user test"></figure>
         <figure class="media"><img src="assets/learners1.jpg" alt="Stacked proBricks built during a user test"></figure>
-        <figure class="media"><img src="assets/learners.jpg" alt="Stacked proBricks built during a user test"></figure>
       </div>
       <div class="card-grid">
         <article class="card">

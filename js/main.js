@@ -21,3 +21,33 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', updateProgress);
 updateProgress();
+
+// Hero play button: plays the hero video again from the start.
+const heroVideo = document.querySelector('.video--hero video');
+const heroPlay = document.querySelector('.video-play');
+
+heroPlay.addEventListener('click', () => {
+  heroVideo.currentTime = 0;
+  heroVideo.play();
+});
+
+// Play/pause toggle buttons (e.g. the Interaction video):
+// the icon follows the video's real state, also when it ends by itself.
+document.querySelectorAll('.video-toggle').forEach((btn) => {
+  const video = btn.closest('.video').querySelector('video');
+
+  btn.addEventListener('click', () => {
+    if (video.paused) video.play();
+    else video.pause();
+  });
+
+  function syncButton() {
+    const playing = !video.paused && !video.ended;
+    btn.classList.toggle('is-playing', playing);
+    btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+  }
+
+  video.addEventListener('play', syncButton);
+  video.addEventListener('pause', syncButton);
+  video.addEventListener('ended', syncButton);
+});
